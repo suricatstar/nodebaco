@@ -1,5 +1,11 @@
-<h1 style="color: blue;">rota de pedidos da pizzaria <%= nomePizzaria %></h1>
+<h1 style="color: blue;">rota de pedidos da pizzaria <%= nomeDoUsuario %></h1>
 
 <p>
     <a href="/">Voltar para a home</a>
 </p>
+
+<ul>
+    <% pedidos.map((pedido) => { %>
+        <li>pedido do <%= pedido.Cliente.nome %> <%= pedido.Cliente.sobrenome %></li>
+    <%}) %>
+</ul>
