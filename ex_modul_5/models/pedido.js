@@ -1,6 +1,6 @@
 const { Schema } = require('mongoose'); 
 
-const Pedido = new Schema({ 
+const PedidoSchema = new Schema({ 
     Cliente: {
         nome: {
             type: String,
@@ -43,4 +43,4 @@ const Pedido = new Schema({
     }
 });
 
-module.exports = Pedido;    
+module.exports = PedidoSchema;    

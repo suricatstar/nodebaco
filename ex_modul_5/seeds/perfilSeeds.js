@@ -6,7 +6,7 @@ const Perfil = mongoose.model("users", PerfilSchema);
 
 const connect = () => {
   mongoose.connect(
-    "mongodb+srv://cauetamiarana:gamesmanias@pizzaebac.2pclw.mongodb.net/pizzaEbac0"
+    "mongodb://localhost:27017/PizzaEbac"
   );
 };
 

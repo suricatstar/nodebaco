@@ -4,13 +4,16 @@ const { Pedido } = require("../models");
 
 const router = express.Router();
 
-router.get("/", (req, res) => {
-    Pedido.find({}).then((pedidos) => {
+router.get("/", async (req, res) => {
+    try {
+        const pedidos = await Pedido.find({});
         res.render("pedidos/index", {
-            nomeDoUsuario: "cauê Tamiarana",
+            nomeDoUsuario: "Cauê Tamiarana",
             pedidos: pedidos,
         });
-    });
+    } catch (error) {
+        res.status(500).send("Erro ao buscar pedidos");
+    }
 });
 
 module.exports = router;

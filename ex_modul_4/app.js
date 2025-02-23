@@ -3,7 +3,7 @@ const path = require('path');
 
 const app = express();
 
-const port = 3200;
+const port = 3000;
 
 // configuração do ejs
 
@@ -18,13 +18,9 @@ const principal = require('./routes/principal')
 
 const perfil = require('./routes/perfil')
 
-const { connect } = require('./models')
-
-
-
 app.listen(port, () => {
-  connect();
-  console.log(`Server is running on port ${port}`);
+  ; const express = require('express');
+ console.log(`Server is running on port ${port}`);
 });
 
 app.use('/', principal);
